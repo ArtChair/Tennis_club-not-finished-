@@ -87,7 +87,7 @@ body {
 header {
   box-sizing: border-box;
   /* height: 100vh; */
-  background-image: url(../img/jumpman.JPG);
+  background: #87CEEB;
   /* background-size: cover; */
 }
 html,
