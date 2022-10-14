@@ -87,7 +87,7 @@ body {
 header {
   box-sizing: border-box;
   /* height: 100vh; */
-  background: #87CEEB;
+  background-color: black;
   /* background-size: cover; */
 }
 html,
