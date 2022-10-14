@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@1,300&family=Montserrat+Alternates:wght@200;300&family=Roboto:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@1,300&family=Montserrat+Alternates:wght@200;300&family=Open+Sans:wght@500;600&family=Roboto:ital@1&display=swap');
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+/* ul[class],
+ol[class] {
+  list-style: none;
+} */
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+  }
+  .wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  header {
+    box-sizing: border-box;
+    /* height: 100vh; */
+    min-height: 263px;
+    background-image: url(../img/homeheader.PNG);
+    /* background-size: cover; */
+  }
+html,
+body {
+    height: 100%;
+}
+  
+.content {
+    max-width: 1300px;
+    margin: 0px auto; 
+}
+.menu {
+    display: flex;
+    align-items: center;
+    padding: 26px 0;
+    justify-content: space-between;
+}
+.logo-header {
+    margin-right: 124px;
+}
+.menu-list {
+    display: flex;
+    list-style: none;
+}
+.menu-item>a {
+    color: #fff;
+    text-decoration: none;
+    font-style: normal;
+    line-height: 140%;
+    font-size: 14px;
+    margin-right: 40px;
+}
+.menu-item>a:hover {
+    border-bottom: 2px solid rgb(255, 255, 255);
+    transition: all 600ms ease;
+}
+.header-after-menu__txt {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 140%;
+    color: #fff;
+    margin-top: 162px;
+}
+  
+.logo-header-yt:hover{
+    background: red;
+    height: 23px;
+    border-radius: 5px;
+}
+.logo-header-vk:hover {
+    background: blue;
+    height: 17px;
+    border-radius: 5px;
+}
+.header-home-title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 140%;
+    /* or 67px */
+    margin-top: 40px;
+    text-align: center;
+}
+.main-blocks-grid{
+    color: black;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 516px;
+    justify-content: center;
+    justify-items: center;
+    /* align-items: baseline; */
+    
+}
+.block-grid-item {
+    max-width: 416px;
+    min-height: 512px;
+    padding:  30px 37px;
+    margin-top: 80px;
+    border: 1px solid #F7ECE1;
+}
+.block-grid-text {
+    text-align: start;
+}
+.block-grid-date {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    opacity: 0.5;
+    margin-top: 25px;
+}
+.block-grid-title {
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 120%;
+    margin-top: 15px;
+}
+.gradient-button{
+    margin-top: 20px;
+}
+.gradient-button {
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    padding: 10px 20px;
+    /* width: 137px;
+    height: 45px; */
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+    background-image: linear-gradient(to right, #9EEFE1 0%, #4830F0 51%, #9EEFE1 100%);
+    background-size: 200% auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+    transition: .5s;
+}
+.gradient-button::after{
+    content: '→';
+    padding-left: 5px;
+}
+.gradient-button:hover {
+    background-position: right center;
+}
+.gradient-button:hover::after {
+    content: '→';
+    padding-left: 5px;
+    animation: arrow 1200ms ease-in-out infinite;
+}
+@keyframes arrow {
+    from {padding-left: 5px;}
+    50% {padding-left: 17px;}
+    to {padding-left: 5px;}
+}
+
+/* ----------------ФУТЕР-------------------- */
+.footer {
+    flex: 0 0 auto;
+    margin-top: 150px;
+    color: #333333;
+    background: #F7ECE1;
+    height: 96px;
+}
+.home-footer-text{
+    margin: 10px 0  300px 100px;
+}
+.home-footer-author a{
+    text-decoration: none;
+    color: red;
+}
